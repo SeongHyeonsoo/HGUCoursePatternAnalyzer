@@ -1,5 +1,5 @@
 package edu.handong.analysis;
-//test
+//test2
 import edu.handong.analysis.datamodel.Course;
 import edu.handong.analysis.datamodel.Student;
 
