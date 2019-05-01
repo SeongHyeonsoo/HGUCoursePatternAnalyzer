@@ -56,10 +56,9 @@ public class HGUCoursePatternAnalyzer {
 	private Student[] initiateStudentArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
-		int i = 0;
-		
-		courses[i].Name = lines[i];
-	
+		for(int i = 0;i<numOfStudents;i++){		
+			students[i].Name = lines[i];
+		}
 		
 		return null;
 	}
@@ -85,6 +84,9 @@ public class HGUCoursePatternAnalyzer {
 	private Course[] initiateCourseArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
+		for(int j = 0;j<numOfCourses;j++){		
+			courses[j].courseName = lines[j];
+		}
 		
 		return null;
 	}
