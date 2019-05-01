@@ -47,7 +47,11 @@ public class HGUCoursePatternAnalyzer {
 		courses = initiateCourseArrayFromLines(lines);
 		System.out.println("Number of All Courses: " + numOfCourses);
 		for(Course course: courses) {
-			System.out.println(course.getCourseName());		
+			if(courseExist(courses, course) == false) {
+				
+			}else if(courseExist(courses, course) == true) {
+				System.out.println(course.getCourseName());
+			}		
 		}
 		
 	}
@@ -122,8 +126,13 @@ public class HGUCoursePatternAnalyzer {
 	private boolean courseExist(Course[] courses, Course course) {
 		
 		// TODO: implement this method
-
-		return false;
+		for(int check = numOfCourses;check>0;check--) {      
+	         if(course.equals(courses[check]) == true) {
+	            return false;
+	         }
+	      }
+	      
+	      return true;
 	}
 
 }
