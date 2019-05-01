@@ -1,5 +1,5 @@
 package edu.handong.analysis;
-//test2
+
 import edu.handong.analysis.datamodel.Course;
 import edu.handong.analysis.datamodel.Student;
 
@@ -56,15 +56,22 @@ public class HGUCoursePatternAnalyzer {
 	private Student[] initiateStudentArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
-		for(int i = 0;i<numOfStudents;i++){		
-			students[i].Name = lines[i];
+
+		for(int i=0;i<numOfStudents;i++){
+	        String[] stringNames = lines[i].split(",");
+	        String sName = stringNames[i].substring(stringNames[i].lastIndexOf(" "));
+			sName.trim();
+	        
+	        Student Name = new Student(sName);
+			
+			students[i] = Name;
 		}
 		
 		return null;
 	}
 
 	/**
-	 * This method check if there is the same name of the second arugement in the array, students
+	 * This method check if there is the same name of the second arguement in the array, students
 	 * @param students
 	 * @param student
 	 * @return boolean
@@ -72,7 +79,7 @@ public class HGUCoursePatternAnalyzer {
 	private boolean studentExist(Student[] students, Student student) {
 		
 		// TODO: implement this method
-
+		
 		return false;
 	}
 	
@@ -84,10 +91,16 @@ public class HGUCoursePatternAnalyzer {
 	private Course[] initiateCourseArrayFromLines(String[] lines) {
 		
 		// TODO: implement this method
-		for(int j = 0;j<numOfCourses;j++){		
-			courses[j].courseName = lines[j];
+		for(int j=0;j<numOfCourses;j++){
+	        String[] stringcNames = lines[j].split(",");
+	        String cName = stringcNames[j].substring(15);
+	        cName.trim();
+	        
+	        Course Name = new Course(cName);
+			
+			courses[j] = Name;
 		}
-		
+	
 		return null;
 	}
 

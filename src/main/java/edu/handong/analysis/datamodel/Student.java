@@ -2,11 +2,12 @@ package edu.handong.analysis.datamodel;
 
 public class Student{
 	
-	public String Name;
+	private String Name;
 
 	public Student(String name) {
 		Name = " ";
 	}
+	
 	
 
 	public String getName() {
